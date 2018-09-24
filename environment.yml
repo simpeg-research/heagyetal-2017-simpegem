@@ -1,0 +1,16 @@
+name: aem-environment
+
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
+  - mkl
+  - tarfile
+  - h5py
+  - pip:
+    - pymatsolver
+    - discretize
+    - SimPEG
