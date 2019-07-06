@@ -1,6 +1,10 @@
 numpy
 scipy
 matplotlib
-SimPEG
-pymatsolver
+mkl
 tarfile
+h5py
+geoana==0.0.5
+pymatsolver==0.1.2
+discretize==0.3.8
+SimPEG==0.10.4
