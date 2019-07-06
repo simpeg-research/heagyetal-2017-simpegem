@@ -2,6 +2,7 @@ import sys
 import os
 import subprocess
 import matplotlib
+import unittest
 
 matplotlib.use('Agg')
 
@@ -14,6 +15,7 @@ passing = []
 for dirname, _, filenames in os.walk(script_dir):
     for filename in filenames:
         if filename.endswith(".py"):
+
             testme = dirname + os.path.sep + filename
             print("\n------ Testing {} --------- \n".format(filename))
 

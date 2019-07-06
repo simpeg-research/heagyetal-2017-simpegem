@@ -2,7 +2,6 @@ numpy
 scipy
 matplotlib
 mkl
-tarfile
 h5py
 geoana==0.0.5
 pymatsolver==0.1.2
