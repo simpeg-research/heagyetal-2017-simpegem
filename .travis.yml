@@ -10,7 +10,7 @@ sudo: false
 
 env:
   matrix:
-    - TEST=tests/test_scripts.py
+    - TEST=tests
 
 before_install:
   - wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
@@ -26,4 +26,4 @@ install:
   - pip install -r requirements_dev.txt
 
 script:
-  - travis_wait 45 pytest $TEST -v -s
+  - travis_wait 45 pytest $TEST

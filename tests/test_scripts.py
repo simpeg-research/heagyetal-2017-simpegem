@@ -10,34 +10,36 @@ script_dir = os.path.sep.join(
     os.path.abspath(__file__).split(os.path.sep)[:-2] + ['examples']
 )
 
-passing = []
+def test_scripts(script_dir=script_dir):
 
-for dirname, _, filenames in os.walk(script_dir):
-    for filename in filenames:
-        if filename.endswith(".py"):
+    passing = []
 
-            testme = dirname + os.path.sep + filename
-            print("\n------ Testing {} --------- \n".format(filename))
+    for dirname, _, filenames in os.walk(script_dir):
+        for filename in filenames:
+            if filename.endswith(".py"):
 
-            try:
-                exc = subprocess.check_call(['python', testme])
-                print("  ... {} Passed \n".format(filename))
-                passing += [True]
-            except subprocess.CalledProcessError as exc:
-                passing += [False]
+                testme = dirname + os.path.sep + filename
+                print("\n------ Testing {} --------- \n".format(filename))
 
-                msg = "\n ... {} FAILED \n".format(filename)
+                try:
+                    exc = subprocess.check_call(['python', testme])
+                    print("  ... {} Passed \n".format(filename))
+                    passing += [True]
+                except subprocess.CalledProcessError as exc:
+                    passing += [False]
 
-                traceback = """
-    ----------------- >> begin Traceback << ----------------- \n
-    {}\n{}\n
-    \n----------------- >> end Traceback << -----------------\n
-                """.format(
-                    exc.returncode, exc.output
-                )
-                print(u"{}".format(msg + traceback))
+                    msg = "\n ... {} FAILED \n".format(filename)
 
-assert all(passing)
+                    traceback = """
+        ----------------- >> begin Traceback << ----------------- \n
+        {}\n{}\n
+        \n----------------- >> end Traceback << -----------------\n
+                    """.format(
+                        exc.returncode, exc.output
+                    )
+                    print(u"{}".format(msg + traceback))
+
+    assert all(passing)
 
 
 # tests = TestScripts(directory=script_dir)
