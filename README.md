@@ -2,11 +2,9 @@
 
 
 # A framework for simulation and inversion in electromagnetics
-[![Build Status](https://travis-ci.org/simpeg-research/heagyetal-2017-simpegem
-.svg?branch=master)](https://travis-ci.org/simpeg-research/heagyetal-2017-simpegem)
+[![Build Status](https://travis-ci.org/simpeg-research/heagyetal-2017-simpegem.svg?branch=master)](https://travis-ci.org/simpeg-research/heagyetal-2017-simpegem)
 [![Zenodo](https://zenodo.org/badge/124603211.svg)](https://zenodo.org/badge/latestdoi/124603211)
-[![License](https://img.shields.io/github/license/simpeg-research/heagyetal-2017-simpegem
-.svg)](https://github.com/simpeg-research/heagyetal-2017-simpegem/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/simpeg-research/heagyetal-2017-simpegem.svg)](https://github.com/simpeg-research/heagyetal-2017-simpegem/blob/master/LICENSE)
 [![SimPEG](https://img.shields.io/badge/powered%20by-SimPEG-blue.svg)](http://simpeg.xyz)
 
 ## Summary
